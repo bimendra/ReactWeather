@@ -25226,34 +25226,81 @@
 	var React = __webpack_require__(8);
 
 	var _require = __webpack_require__(166),
-	    Link = _require.Link;
+	    Link = _require.Link,
+	    IndexLink = _require.IndexLink;
 
 	module.exports = React.createClass({
 	    displayName: 'exports',
 
+	    onSearch: function onSearch(e) {
+	        e.preventDefault();
+	        alert('Not yet wired up!');
+	    },
 	    render: function render() {
 	        return React.createElement(
 	            'div',
-	            null,
+	            { className: 'top-bar' },
 	            React.createElement(
-	                'h2',
-	                null,
-	                'Nav Component'
+	                'div',
+	                { className: 'top-bar-left' },
+	                React.createElement(
+	                    'ul',
+	                    { className: 'menu' },
+	                    React.createElement(
+	                        'li',
+	                        { className: 'menu-text' },
+	                        'React Weather App'
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        React.createElement(
+	                            IndexLink,
+	                            { to: '/' },
+	                            'Get Weather'
+	                        )
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        React.createElement(
+	                            Link,
+	                            { to: '/about' },
+	                            'About'
+	                        )
+	                    ),
+	                    React.createElement(
+	                        'li',
+	                        null,
+	                        React.createElement(
+	                            Link,
+	                            { to: '/examples' },
+	                            'Examples'
+	                        )
+	                    )
+	                )
 	            ),
 	            React.createElement(
-	                Link,
-	                { to: '/' },
-	                'Get Weather'
-	            ),
-	            React.createElement(
-	                Link,
-	                { to: '/about' },
-	                'About'
-	            ),
-	            React.createElement(
-	                Link,
-	                { to: '/examples' },
-	                'Examples'
+	                'div',
+	                { className: 'top-bar-right' },
+	                React.createElement(
+	                    'form',
+	                    { onSubmit: this.onSearch },
+	                    React.createElement(
+	                        'ul',
+	                        { className: 'menu' },
+	                        React.createElement(
+	                            'li',
+	                            null,
+	                            React.createElement('input', { type: 'search', placeholder: 'Search weather' })
+	                        ),
+	                        React.createElement(
+	                            'li',
+	                            null,
+	                            React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
+	                        )
+	                    )
+	                )
 	            )
 	        );
 	    }
