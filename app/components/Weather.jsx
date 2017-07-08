@@ -44,7 +44,7 @@ module.exports = React.createClass({
         }
         return(
             <div>
-                <h3>Weather Component</h3>
+                <h1>Get Weather</h1>
                 <WeatherForm onSearch={this.handleSearch} placeholderText="Search city by name"/>
                 {renderMessage()}
             </div>

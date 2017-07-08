@@ -25373,9 +25373,9 @@
 	            'div',
 	            null,
 	            React.createElement(
-	                'h3',
+	                'h1',
 	                null,
-	                'Weather Component'
+	                'Get Weather'
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch, placeholderText: 'Search city by name' }),
 	            renderMessage()
@@ -25414,7 +25414,7 @@
 	            React.createElement('input', { type: 'text', ref: 'location', placeholder: this.props.placeholderText }),
 	            React.createElement(
 	                'button',
-	                null,
+	                { className: 'button expanded hollow' },
 	                'Get Weather'
 	            )
 	        );
